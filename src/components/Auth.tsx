@@ -93,7 +93,15 @@ export function SyncAuth() {
 const OnStart = memo(() => {
   const { project } = useAuth();
 
+  const startAction = useAction({
+    verbName: "OpenTemplateApplication",
+  });
+
   const projectId = project?.id;
+
+  useEffect(() => {
+    if (projectId) startAction();
+  }, [projectId, startAction]);
 
   return null;
 });
