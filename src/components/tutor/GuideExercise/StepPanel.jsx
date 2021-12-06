@@ -96,7 +96,6 @@ export const StepPanel = ({
       if (step.n_step === nStep && nStep === 0) {
         if (answer[0].id === step.correct_answer) {
           if (answerGuide) {
-            console.log("entre en setanswerguide");
             setStepCorrect((state) => [...state, answer[0].value]);
             setColor((prev) => [
               ...prev.slice(0, nStep),
@@ -111,10 +110,11 @@ export const StepPanel = ({
             const newStep = {
               target: ".box2",
               content:
-                "Cuando resuelva correctamente un paso, se activara de manera automatica el siguiente",
+                "Cuando resuelva correctamente un paso, se activara de manera automática el siguiente",
               spotlightClicks: true,
               hideCloseButton: true,
               disableOverlayClose: true,
+              disableCloseOnEsc: true,
             };
             setIntro((prev) => ({
               ...prev,
@@ -125,15 +125,24 @@ export const StepPanel = ({
 
             const das = {
               target: ".panel2",
-              content:
-                "Existen pasos en donde debera colocar de manera escrita su respuesta.",
+              content: "Existen pasos en donde debera escribir su respuesta.",
               spotlightClicks: true,
               hideCloseButton: true,
               disableOverlayClose: true,
+              disableCloseOnEsc: true,
+            };
+            setIntro((prev) => ({ ...prev, steps: [...prev.steps, das] }));
+
+            const lastStep = {
+              target: ".panel2",
+              content:
+                "Llego su turno, ahora resuelva completamente el ejercicio",
               spotlightClicks: true,
+              hideCloseButton: true,
+              disableOverlayClose: true,
             };
 
-            setIntro((prev) => ({ ...prev, steps: [...prev.steps, das] }));
+            setIntro((prev) => ({ ...prev, steps: [...prev.steps, lastStep] }));
           } else {
           }
         } else {
@@ -149,13 +158,14 @@ export const StepPanel = ({
               ...prev.slice(nStep + 1),
             ]);
             const newStep = {
-              target: ".pescawnono",
+              target: ".hintclick",
               content:
-                "Cuando se corriga una respuesta incorrecta, una pista se activara.",
+                "Cuando se corrija una respuesta incorrecta, una pista se activara si hay disponibles. Presione el botón Pista",
               spotlightClicks: true,
               hideCloseButton: true,
               disableOverlayClose: true,
               spotlightClicks: true,
+              disableCloseOnEsc: true,
             };
             setIntro((prev) => ({
               ...prev,
@@ -245,7 +255,7 @@ export const StepPanel = ({
               </Flex>
             </Flex>
             <Stack
-              className={"pescawnono"}
+              className={"hintclick"}
               marginLeft={{ base: "0px", xl: "-180px" }}
             >
               <Grid

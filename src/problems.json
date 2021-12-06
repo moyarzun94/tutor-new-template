@@ -5,7 +5,7 @@
     "description": "",
 
     "order_steps": {
-      "show": true,
+      "show": false,
       "position": "final"
     },
     "content": "eq",
@@ -339,7 +339,7 @@
     "description": "",
     "order_steps": {
       "show": true,
-      "position": "initial"
+      "position": "final"
     },
     "content": "eq",
     "difficulty": 1,

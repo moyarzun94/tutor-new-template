@@ -103,7 +103,7 @@ export default function Tutorial() {
               Atrás
             </button>
           )}
-          {(!isLastStep || index === 8 || index === 6) && (
+          {(!isLastStep || index === 9 || index === 6) && (
             <button
               style={{
                 backgroundColor: "rgb(255, 0, 68)",
@@ -118,7 +118,7 @@ export default function Tutorial() {
               }}
               {...primaryProps}
             >
-              {index === 8 || (index === 6 && isLastStep)
+              {index === 9 || (index === 6 && isLastStep)
                 ? "Finalizar"
                 : "Siguiente"}
             </button>
@@ -140,40 +140,45 @@ export default function Tutorial() {
           hideCloseButton: true,
           spotlightClicks: true,
           disableOverlayClose: true,
+          disableCloseOnEsc: true,
         },
         {
           target: ".box1",
           content:
-            "Cada ejercicio es divido en estos pasos desplegables los cuales indican que acción debe realizar el estudiante.",
+            "Cada ejercicio es divido en estos pasos desplegables los cuales indican que acción debe realizar el usuario.",
           hideCloseButton: true,
           spotlightClicks: true,
           disableOverlayClose: true,
+          disableCloseOnEsc: true,
         },
 
         {
           target: ".top-panel",
           content:
-            "En la primera fila se encuentra el lugar donde el estudiante debe depositar su respuesta, además de los botones para corregir y solicitar pistas. ",
+            "En la primera fila se encuentra el lugar donde el usuario debe depositar su respuesta, además de los botones para corregir y solicitar pistas. ",
           spotlightClicks: true,
           hideCloseButton: true,
           disableOverlayClose: true,
+          disableCloseOnEsc: true,
         },
         {
           target: ".answer-panel",
           content:
-            "En esta fila se encuentran las posibles soluciones para el paso, el usuario puede arrastrar estas respuestas o realizar doble click sobre ellas, para depositarlas en el espacio de respuestas",
+            "En esta fila se encuentran las posibles soluciones para el paso, el usuario puede arrastrar estas respuestas o realizar un doble clic sobre ellas, para depositarlas en la parte superior",
           hideCloseButton: true,
           disableOverlayClose: true,
+          disableCloseOnEsc: true,
         },
         {
           target: ".panel1",
           content:
-            "Es su turno, para ello escoga la solución a=-1, b=-5, c=-6 y aprete el boton corregir. ",
+            "Es su turno, para ello escoja la solución a=-1, b=-5, c=-6 y presioné el botón corregir.  ",
           hideCloseButton: false,
           disableOverlayClose: true,
           spotlightClicks: true,
           placement: "bottom",
           disableBeacon: true,
+          disableCloseOnEsc: true,
         },
       ],
     });

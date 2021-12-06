@@ -86,7 +86,6 @@ export const Hint = ({
     setCountNotication(0);
     if (lastHint && newHintAvaliable) {
       if (nStep === 0) {
-        console.log("entre");
         const newStep = {
           target: ".panel1",
           content: "Ahora resuelva correctamente este paso.",
