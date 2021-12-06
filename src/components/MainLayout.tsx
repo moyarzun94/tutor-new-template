@@ -56,13 +56,13 @@ export function MainLayout({ children }: { children: ReactNode }) {
           <Flex direction="column" height="full">
             <Flex
               w="full"
-              py="4"
+              py="0"
               justify="space-between"
               align="center"
               px="10"
               display={{ base: "block", md: "none" }}
             >
-              <Flex align="center" minH="8">
+              <Flex align="center" minH="6">
                 <MobileMenuButton onClick={toggle} isOpen={isOpen} />
               </Flex>
               {false && <SearchInput />}

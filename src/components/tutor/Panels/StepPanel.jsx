@@ -72,6 +72,7 @@ export const StepPanel = ({
           nStep={nStep}
           column={item.column}
           value={item.value}
+          items={items}
           setItems={setItems}
           answer={answer}
           isCorrect={isCorrect}

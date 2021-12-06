@@ -27,7 +27,7 @@ import {
 import { useAction } from "../../../utils/action";
 import ExerciseContext from "../../../context/exercise/exerciseContext";
 
-export const Hint = ({
+export const HintEqSystem = ({
   hints,
   firstTimeHint,
   setNewHintAvaliable,
@@ -63,16 +63,24 @@ export const Hint = ({
   }, [answerId]);
 
   const getHint = (idAnswer) => {
-    if (allHints != undefined) {
+    if (allHints != undefined && idAnswer) {
       let filterHint = allHints.find((hint) => {
-        return hint.answers.includes(idAnswer);
+        return hint.answers.includes(idAnswer[0]);
       });
 
-      filterHint = filterHint
-        ? filterHint
-        : allHints.find((hint) => hint.generic);
+      if (filterHint) {
+        return filterHint;
+      } else {
+        filterHint = filterHint
+          ? filterHint
+          : allHints.find((hint) => hint.answers.includes(idAnswer[1]));
 
-      return filterHint;
+        filterHint = filterHint
+          ? filterHint
+          : allHints.find((hint) => hint.generic);
+
+        return filterHint;
+      }
     }
     return null;
   };

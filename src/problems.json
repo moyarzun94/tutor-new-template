@@ -3754,32 +3754,32 @@
           {
             "id": 0,
             "text": "\\text {Estas por buen camino chekea con} \\newline \\text{cuidado el signo de tu alternativa}",
-            "answers": [2, 1],
+            "answers": [1],
             "generic": false
           },
           {
             "id": 1,
             "text": "\\text {Los signos de  a y b} \\newline \\text{cuidado el signo de tu alternativa}",
-            "answers": [5, 3],
+            "answers": [3],
             "generic": false
           },
           {
             "id": 2,
             "text": "\\text { 'a' es el coeficiente que acompaña} \\newline \\text{término cuadrático}",
-            "answers": [2],
-            "generic": true
+            "answers": [5],
+            "generic": false
           },
           {
             "id": 3,
             "text": "\\text {Para determinar 'a' fijate en el}\\newline \\text{coeficiente de } x^2",
             "answers": [3],
-            "generic": true
+            "generic": false
           },
           {
             "id": 4,
             "text": "\\text {El coeficiente 'a' es 1, el b es -5 y} \\newline \\text{'c' es 6}",
-            "answers": [2],
-            "generic": true
+            "answers": [5],
+            "generic": false
           }
         ],
         "type": "drag-fixed-two",

@@ -28,6 +28,7 @@ specifiers:
   react-dnd-touch-backend: ^14.1.0
   react-dom: ^17.0.2
   react-icons: ^4.3.1
+  react-joyride: ^2.3.1
   react-notification-badge: ^1.5.1
   react-query: ^3.32.1
   rq-gql: ^0.3.1
@@ -56,6 +57,7 @@ dependencies:
   react-dnd-touch-backend: 14.1.1
   react-dom: 17.0.2_react@17.0.2
   react-icons: 4.3.1_react@17.0.2
+  react-joyride: 2.3.2_react-dom@17.0.2+react@17.0.2
   react-notification-badge: 1.5.1_react-dom@17.0.2+react@17.0.2
   react-query: 3.32.1_react-dom@17.0.2+react@17.0.2
   rq-gql: 0.3.1_0f05b8d07dcaca857898ecba0b163399
@@ -3419,9 +3421,18 @@ packages:
       mimic-response: 1.0.1
     dev: false
 
+  /deep-diff/1.0.2:
+    resolution: {integrity: sha512-aWS3UIVH+NPGCD1kki+DCU9Dua032iSsO43LqQpcs4R3+dVv7tX0qBGjiVHJHjplsoUM2XRO/KB92glqc68awg==}
+    dev: false
+
   /deep-extend/0.6.0:
     resolution: {integrity: sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA==}
     engines: {node: '>=4.0.0'}
+    dev: false
+
+  /deepmerge/4.2.2:
+    resolution: {integrity: sha512-FJ3UgI4gIl+PHZm53knsuSFpE+nESMr7M4v9QcgB7S63Kj/6WqMiFQJpBBYz1Pt+66bZpP3Q7Lye0Oo9MPKEdg==}
+    engines: {node: '>=0.10.0'}
     dev: false
 
   /defer-to-connect/1.1.3:
@@ -3673,6 +3684,10 @@ packages:
     dependencies:
       md5.js: 1.3.5
       safe-buffer: 5.2.1
+    dev: false
+
+  /exenv/1.2.2:
+    resolution: {integrity: sha1-KueOhdmJQVhnCwPUe+wfA72Ru50=}
     dev: false
 
   /external-editor/3.1.0:
@@ -4409,6 +4424,10 @@ packages:
     dependencies:
       is-extglob: 2.1.1
 
+  /is-lite/0.8.1:
+    resolution: {integrity: sha512-ekSwuewzOmwFnzzAOWuA5fRFPqOeTrLIL3GWT7hdVVi+oLuD+Rau8gCmkb94vH5hjXc1Q/CfIW/y/td1RrNQIg==}
+    dev: false
+
   /is-lower-case/2.0.2:
     resolution: {integrity: sha512-bVcMJy4X5Og6VZfdOZstSexlEy20Sr0k/p/b2IlQJlfdKAQuMpiv5w2Ccxb8sKdRUNAG1PnHVHjFSdRDVS6NlQ==}
     dependencies:
@@ -5070,6 +5089,14 @@ packages:
     hasBin: true
     dev: false
 
+  /nested-property/1.0.1:
+    resolution: {integrity: sha512-BnBBoo/8bBNRdAnJc7+m79oWk7dXwW1+vCesaEQhfDGVwXGLMvmI4NwYgLTW94R/x+R2s/yr2g/hB/4w/YSAvA==}
+    dev: false
+
+  /nested-property/4.0.0:
+    resolution: {integrity: sha512-yFehXNWRs4cM0+dz7QxCd06hTbWbSkV0ISsqBfkntU6TOY4Qm3Q88fRRLOddkGh2Qq6dZvnKVAahfhjcUvLnyA==}
+    dev: false
+
   /next/12.0.3_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-GGdhTBcerdMZbitrO67IVetmB+AHa2X69xrkXKClUT8SRu8pEVto/2QMSnfI+uYc5czCUWPsVtVY3aMoMRMaCA==}
     engines: {node: '>=12.22.0'}
@@ -5505,6 +5532,11 @@ packages:
       tslib: 2.3.1
     dev: false
 
+  /popper.js/1.16.1:
+    resolution: {integrity: sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==}
+    deprecated: You can find the new Popper v2 at @popperjs/core, this package is dedicated to the legacy v1
+    dev: false
+
   /postcss/8.2.15:
     resolution: {integrity: sha512-2zO3b26eJD/8rb106Qu2o7Qgg52ND5HPjcyQiK2B98O388h43A448LCslC0dI2P97wCAQRJsFvwTRcXxTKds+Q==}
     engines: {node: ^10 || ^12 || >=14}
@@ -5688,6 +5720,23 @@ packages:
     resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
     dev: false
 
+  /react-floater/0.7.3_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-d1wAEph+xRxQ0RJ3woMmYLlZHTaCIsja7Bv6JNo2ezsVUgdMan4CxOR4Do4/xgpmRFfsQMdlygexLAZZypWirw==}
+    peerDependencies:
+      prop-types: ^15.7.2
+      react: ^15.0.0 || ^16.0.0 || ^17.0.0
+      react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0
+    dependencies:
+      deepmerge: 4.2.2
+      exenv: 1.2.2
+      is-lite: 0.8.1
+      popper.js: 1.16.1
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-proptype-conditional-require: 1.0.4
+      tree-changes: 0.5.1
+    dev: false
+
   /react-focus-lock/2.5.2_27d7f75f5fffc1228c129be468caca5c:
     resolution: {integrity: sha512-WzpdOnEqjf+/A3EH9opMZWauag7gV0BxFl+EY4ElA4qFqYsUsBLnmo2sELbN5OC30S16GAWMy16B9DLPpdJKAQ==}
     peerDependencies:
@@ -5720,6 +5769,27 @@ packages:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
     dev: false
 
+  /react-joyride/2.3.2_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-MPYvHdxF/ylBZXJkKzyR3nTd+jydPeTKVwQDg8y7Ctl5H0UPgvF3uCzfieyJqE/JnK2wJU4QcjkontqBU1g7Xg==}
+    peerDependencies:
+      prop-types: ^15.0.0
+      react: ^15.0.0 || ^16.0.0 || ^17.0.0
+      react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0
+    dependencies:
+      deep-diff: 1.0.2
+      deepmerge: 4.2.2
+      exenv: 1.2.2
+      is-lite: 0.8.1
+      nested-property: 4.0.0
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      react-floater: 0.7.3_react-dom@17.0.2+react@17.0.2
+      react-is: 16.13.1
+      scroll: 3.0.1
+      scrollparent: 2.0.1
+      tree-changes: 0.7.1
+    dev: false
+
   /react-notification-badge/1.5.1_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-4/kFrQcJ7eMfYh9SdXXgBaaEDCIV7UsLX5bgSS1aj+OnX2OpIFTatY3Dclo8qLpkX+Ue6x0Aiib+U9dkDKrSwQ==}
     peerDependencies:
@@ -5730,6 +5800,10 @@ packages:
       core-js: 3.19.1
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
+    dev: false
+
+  /react-proptype-conditional-require/1.0.4:
+    resolution: {integrity: sha1-acLVdB5t9eCPIw82u8KUTuEiJVU=}
     dev: false
 
   /react-query/3.32.1_react-dom@17.0.2+react@17.0.2:
@@ -6087,6 +6161,14 @@ packages:
     dependencies:
       loose-envify: 1.4.0
       object-assign: 4.1.1
+    dev: false
+
+  /scroll/3.0.1:
+    resolution: {integrity: sha512-pz7y517OVls1maEzlirKO5nPYle9AXsFzTMNJrRGmT951mzpIBy7sNHOg5o/0MQd/NqliCiWnAi0kZneMPFLcg==}
+    dev: false
+
+  /scrollparent/2.0.1:
+    resolution: {integrity: sha1-cV1bnMV3YPsivczDvvtb/gaxoxc=}
     dev: false
 
   /scuid/1.1.0:
@@ -6551,6 +6633,20 @@ packages:
     resolution: {integrity: sha1-qLE/1r/SSJUZZ0zN5VujaTtwbQk=}
     dependencies:
       punycode: 2.1.1
+    dev: false
+
+  /tree-changes/0.5.1:
+    resolution: {integrity: sha512-O873xzV2xRZ6N059Mn06QzmGKEE21LlvIPbsk2G+GS9ZX5OCur6PIwuuh0rWpAPvLWQZPj0XObyG27zZyLHUzw==}
+    dependencies:
+      deep-diff: 1.0.2
+      nested-property: 1.0.1
+    dev: false
+
+  /tree-changes/0.7.1:
+    resolution: {integrity: sha512-sPIt8PKDi0OQTglr7lsetcB9DU19Ls/ZgFSjFvK6DWJGisAn4sOxtjpmQfuqjexQE4UU9U53LNmataL1kRJ3Uw==}
+    dependencies:
+      fast-deep-equal: 3.1.3
+      is-lite: 0.8.1
     dev: false
 
   /tree-kill/1.2.2:

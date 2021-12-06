@@ -16,9 +16,10 @@ export function Navigation() {
 
         {user && (
           <>
-            <SidebarLink icon={<FaLock />} href="/protected">
-              Protected
+            <SidebarLink icon={<FaLock />} href="/tutorial">
+              Tutorial
             </SidebarLink>
+
             <SidebarLink icon={<FaLock />} href="/practice">
               Practica
             </SidebarLink>

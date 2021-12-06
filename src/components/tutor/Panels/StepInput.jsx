@@ -34,6 +34,9 @@ export const StepInput = ({
   const [alert, setAlert] = useState({});
   const [openAlert, setOpenAlert] = useState(false);
   const exerciseContext = useContext(ExerciseContext);
+  const [newHintAvaliable, setNewHintAvaliable] = useState(false);
+  const [firstTimeHint, setFirstTimeHint] = useState(true);
+  const [answerInput, setAnswerInput] = useState("");
   const { content } = exerciseContext;
 
   const startAction = useAction({});
@@ -62,6 +65,7 @@ export const StepInput = ({
       });
     } else {
       if (step.n_step === nStep) {
+        setAnswerInput(answer);
         if (answer === step.correct_answer.toString()) {
           startAction({
             verbName: "tryStep",
@@ -86,6 +90,8 @@ export const StepInput = ({
           setIsCorrect(true);
           checkLastStep();
         } else {
+          setFirstTimeHint(false);
+          setNewHintAvaliable(true);
           startAction({
             verbName: "tryStep",
             contentID: content,
@@ -163,7 +169,13 @@ export const StepInput = ({
                   {CORRECT_BUTTOM_NAME}
                 </Button>
 
-                <Hint hints={step.hints} />
+                <Hint
+                  firstTimeHint={firstTimeHint}
+                  hints={step.hints}
+                  setNewHintAvaliable={setNewHintAvaliable}
+                  answerId={parseInt(answerInput)}
+                  newHintAvaliable={newHintAvaliable}
+                />
               </Grid>
 
               <Stack display={{ xl: "block", base: "none" }}>
@@ -174,7 +186,13 @@ export const StepInput = ({
                     </Button>
                   </div>
                   <div style={{ paddingRight: "5px" }}>
-                    <Hint hints={step.hints} />
+                    <Hint
+                      firstTimeHint={firstTimeHint}
+                      hints={step.hints}
+                      setNewHintAvaliable={setNewHintAvaliable}
+                      answerId={parseInt(answerInput)}
+                      newHintAvaliable={newHintAvaliable}
+                    />
                   </div>
                 </Flex>
               </Stack>
