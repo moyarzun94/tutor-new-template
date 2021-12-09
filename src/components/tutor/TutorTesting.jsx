@@ -106,7 +106,7 @@ export function TutorTesting({
                     />
                     {nextExercise && (
                       <>
-                        {exerciseSelected.content ===
+                        {exerciseSelected.content !==
                           ("sys_eq0" || "sys_eq1") && <Feedback />}
                         <Button
                           marginRight="12px"
@@ -133,7 +133,7 @@ export function TutorTesting({
                   />
                   {nextExercise && (
                     <>
-                      {exerciseSelected.content ===
+                      {exerciseSelected.content !==
                         ("sys_eq0" || "sys_eq1") && <Feedback />}
 
                       <Button

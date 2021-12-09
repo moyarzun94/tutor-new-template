@@ -1851,7 +1851,7 @@
           },
           {
             "id": 1,
-            "text": "\\text {Te equivocaste reemplazaste el valor \\newline \\text{de 'y' en 'x'} ",
+            "text": "\\text {Te equivocaste reemplazaste el valor} \\newline \\text{de 'y' en 'x'} ",
             "answers": [5],
             "generic": false
           },
@@ -1899,7 +1899,7 @@
         "hints": [
           {
             "id": 0,
-            "text": "\\text {Usa la propiedad distributiva} \\newline text{en} {4(3x+6)}",
+            "text": "\\text {Usa la propiedad distributiva} \\newline \\text{en } {4(3x+6)}",
             "answers": [7],
             "generic": true
           },
@@ -2069,7 +2069,7 @@
           },
           {
             "id": 1,
-            "text": "\\text {Te equivocaste reemplazaste el valor \\newline \\text{de 'x' en 'y'} ",
+            "text": "\\text {Te equivocaste reemplazaste el valor} \\newline \\text{de 'x' en 'y'} ",
             "answers": [4],
             "generic": false
           },
@@ -2117,7 +2117,7 @@
         "hints": [
           {
             "id": 0,
-            "text": "\\text {Usa la propiedad distributiva} \\newline text{en} {2(2y+3)}",
+            "text": "\\text {Usa la propiedad distributiva} \\newline \\text{en } {2(2y+3)}",
             "answers": [7],
             "generic": true
           },
@@ -2129,7 +2129,7 @@
           },
           {
             "id": 2,
-            "text": "\\text {Suma las 'y' restantes como también}  \\newline text{las constantes.}",
+            "text": "\\text {Suma las 'y' restantes como también}  \\newline \\text{las constantes.}",
             "answers": [7],
             "generic": true
           }
@@ -2187,7 +2187,7 @@
       {
         "n_step": 4,
         "left_text": "Calcula 'x' sustituyendo el valor de 'y'",
-        "input_labels": "y = ",
+        "input_labels": "x = ",
         "correct_answer": 7,
         "hints": [
           {
