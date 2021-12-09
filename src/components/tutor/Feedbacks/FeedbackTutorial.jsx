@@ -12,10 +12,13 @@ import {
   Text,
 } from "@chakra-ui/react";
 import TeX from "@matejmazur/react-katex";
+import { useRouter } from "next/router";
 
 import { useDisclosure } from "@chakra-ui/hooks";
-export const FeedbackTesting = ({ showFeedback }) => {
+export const FeedbackTutorial = ({ showFeedback }) => {
   const [showF, setShowF] = useState(false);
+
+  const { push } = useRouter();
 
   useEffect(() => {
     setShowF(showFeedback);
@@ -28,19 +31,15 @@ export const FeedbackTesting = ({ showFeedback }) => {
         <ModalOverlay />
         <ModalContent>
           <ModalHeader style={{ margin: "auto" }}>
-            Felicidades has completado todos los ejercicios
+            Has completado correctamente el tutorial
           </ModalHeader>
           <ModalCloseButton onClick={() => setShowF(false)} />
           <ModalBody style={{ fontSize: "20px", margin: "auto" }}>
-            <Text>
-              {" "}
-              Gracias por participar de esta prueba general de usabilidad.
-            </Text>
-            <Text>Tu feedback nos sera de gran ayuda.</Text>
+            <Text> Ahora iremos a resolver más ejercicios</Text>
           </ModalBody>
           <ModalFooter>
-            <Button colorScheme="red" mr={3} onClick={() => setShowF(false)}>
-              Cerrar
+            <Button colorScheme="red" mr={3} onClick={() => push(`/practice/`)}>
+              Siguiente
             </Button>
           </ModalFooter>
         </ModalContent>

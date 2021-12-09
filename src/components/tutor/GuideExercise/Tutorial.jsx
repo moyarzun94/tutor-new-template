@@ -164,7 +164,7 @@ export default function Tutorial() {
         {
           target: ".answer-panel",
           content:
-            "En esta fila se encuentran las posibles soluciones para el paso. Puedes arrastrar estas respuestas o realizar un doble clic sobre ellas, para depositarlas en la parte superior",
+            "En esta fila se encuentran las posibles soluciones para el paso. Puedes arrastrar estas respuestas o realizar un doble clic sobre ellas, para depositarlas en la parte superior.",
           hideCloseButton: true,
           disableOverlayClose: true,
           disableCloseOnEsc: true,

@@ -1,7 +1,6 @@
 import { Stack } from "@chakra-ui/react";
 import { FaLock } from "react-icons/fa";
 import { useAuth } from "./Auth";
-import { DarkModeToggle } from "./DarkModeToggle";
 import { ScrollArea } from "./ScrollArea";
 import { SidebarLink } from "./SidebarLink";
 
@@ -21,9 +20,6 @@ export function Navigation() {
             </SidebarLink>
           </>
         )}
-      </Stack>
-      <Stack alignItems="center">
-        <DarkModeToggle />
       </Stack>
     </ScrollArea>
   );

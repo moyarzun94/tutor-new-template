@@ -65,7 +65,6 @@ export const StepInput = ({
       });
     } else {
       if (step.n_step === nStep) {
-        setAnswerInput(answer);
         if (answer === step.correct_answer.toString()) {
           startAction({
             verbName: "tryStep",
@@ -90,6 +89,8 @@ export const StepInput = ({
           setIsCorrect(true);
           checkLastStep();
         } else {
+          setAnswerInput(answer);
+
           setFirstTimeHint(false);
           setNewHintAvaliable(true);
           startAction({
@@ -176,6 +177,7 @@ export const StepInput = ({
                   answerId={parseInt(answerInput)}
                   newHintAvaliable={newHintAvaliable}
                   content={content}
+                  nStep={nStep}
                 />
               </Grid>
 
@@ -194,6 +196,7 @@ export const StepInput = ({
                       answerId={parseInt(answerInput)}
                       newHintAvaliable={newHintAvaliable}
                       content={content}
+                      nStep={nStep}
                     />
                   </div>
                 </Flex>

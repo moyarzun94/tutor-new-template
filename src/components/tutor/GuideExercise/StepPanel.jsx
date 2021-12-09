@@ -110,7 +110,7 @@ export const StepPanel = ({
             const newStep = {
               target: ".box2",
               content:
-                "Cuando resuelva correctamente un paso, se activara de manera automática el siguiente",
+                "Cuando resuelvas correctamente un paso, se activara de manera automática el siguiente.",
               spotlightClicks: true,
               hideCloseButton: true,
               disableOverlayClose: true,
@@ -136,7 +136,7 @@ export const StepPanel = ({
             const lastStep = {
               target: ".panel2",
               content:
-                "Llego tu turno, ahora resuelva completamente el ejercicio",
+                "Llego tu turno, ahora resuelve completamente el ejercicio.",
               spotlightClicks: true,
               hideCloseButton: true,
               disableOverlayClose: true,
@@ -160,7 +160,7 @@ export const StepPanel = ({
             const newStep = {
               target: ".hintclick",
               content:
-                "Cuando una respuesta es incorrecta, se activaran pistas si hay disponibles. Estas son opcionales, si deseas ver una de ellas presiona el botón Pista",
+                "Cuando una respuesta es incorrecta, se activaran pistas si hay disponibles. Estas son opcionales, veamos una de ellas para eso presiona el botón Pista",
               spotlightClicks: true,
               hideCloseButton: true,
               disableOverlayClose: true,
