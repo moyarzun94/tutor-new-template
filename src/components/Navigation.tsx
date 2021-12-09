@@ -1,5 +1,5 @@
 import { Stack } from "@chakra-ui/react";
-import { FaHome, FaLock } from "react-icons/fa";
+import { FaLock } from "react-icons/fa";
 import { useAuth } from "./Auth";
 import { DarkModeToggle } from "./DarkModeToggle";
 import { ScrollArea } from "./ScrollArea";
