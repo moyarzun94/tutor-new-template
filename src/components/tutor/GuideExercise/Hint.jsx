@@ -88,7 +88,7 @@ export const Hint = ({
       if (nStep === 0) {
         const newStep = {
           target: ".panel1",
-          content: "Ahora resuelva correctamente este paso.",
+          content: "Ahora resuelve correctamente este paso.",
           hideCloseButton: true,
           disableOverlayClose: true,
           spotlightClicks: true,
