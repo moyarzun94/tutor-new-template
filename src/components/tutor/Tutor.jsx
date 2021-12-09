@@ -3,7 +3,7 @@ import { Button, Stack, Link } from "@chakra-ui/react";
 import { useAuth0 } from "@auth0/auth0-react";
 import TeX from "@matejmazur/react-katex";
 import "katex/dist/katex.min.css";
-import problems from "../../problems.json";
+import problems from "../../practiceproblem.json";
 import { AccordionSteps } from "./Accordion/AccordionSteps";
 import { Feedback } from "./Feedbacks/Feedback";
 import { SortSteps } from "./SortSteps/SortSteps";

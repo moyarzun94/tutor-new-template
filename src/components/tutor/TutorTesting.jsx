@@ -3,7 +3,7 @@ import { Button, Stack, Link } from "@chakra-ui/react";
 import { useAuth0 } from "@auth0/auth0-react";
 import TeX from "@matejmazur/react-katex";
 import "katex/dist/katex.min.css";
-import problems from "../../problems.json";
+import problems from "../../practiceproblem.json";
 import { AccordionSteps } from "./Accordion/AccordionSteps";
 import { Feedback } from "./Feedbacks/Feedback";
 import { SortStepsTest } from "./SortSteps/SortStepsTest";
@@ -58,7 +58,7 @@ export function TutorTesting({
     startAction({
       verbName: "nextContent",
     });
-    if (id < 2) {
+    if (id < 7) {
       setTabIndex((prev) => prev + 1);
     } else {
       setShowFeedback(true);
@@ -93,6 +93,7 @@ export function TutorTesting({
                     steps={exerciseSelected.steps}
                     setNextPhase={setNextPhase}
                     linkNext={false}
+                    content={exerciseSelected.content}
                     setTabIndex={setTabIndex}
                     setColorTab={setColorTab}
                     setShowFeedback={setShowFeedback}
@@ -105,7 +106,8 @@ export function TutorTesting({
                     />
                     {nextExercise && (
                       <>
-                        <Feedback />
+                        {exerciseSelected.content ===
+                          ("sys_eq0" || "sys_eq1") && <Feedback />}
                         <Button
                           marginRight="12px"
                           fontSize={{
@@ -131,7 +133,8 @@ export function TutorTesting({
                   />
                   {nextExercise && (
                     <>
-                      <Feedback />
+                      {exerciseSelected.content ===
+                        ("sys_eq0" || "sys_eq1") && <Feedback />}
 
                       <Button
                         marginRight="12px"
@@ -154,6 +157,7 @@ export function TutorTesting({
                   steps={exerciseSelected.steps}
                   setIdExercise={setIdExercise}
                   linkNext={true}
+                  content={exerciseSelected.content}
                   idExercise={idExercise}
                   setTabIndex={setTabIndex}
                   setColorTab={setColorTab}
@@ -168,7 +172,9 @@ export function TutorTesting({
                 />
                 {nextExercise && (
                   <>
-                    <Feedback />
+                    {exerciseSelected.content !== ("sys_eq0" || "sys_eq1") && (
+                      <Feedback />
+                    )}
                     <Button
                       marginRight="12px"
                       fontSize={{

@@ -28,6 +28,7 @@ export const SortStepsTest = ({
   setIdExercise,
   setTabIndex,
   setColorTab,
+  content,
   setShowFeedback,
 }) => {
   const [cards, setCards] = useState([]);
@@ -35,7 +36,6 @@ export const SortStepsTest = ({
   const [cardColor, setCardColor] = useState([]);
   const startAction = useAction({});
   const exerciseContext = useContext(ExerciseContext);
-  const { content } = exerciseContext;
   const { push } = useRouter();
   useEffect(() => {
     if (steps) {
@@ -122,7 +122,7 @@ export const SortStepsTest = ({
     startAction({
       verbName: "nextContent",
     });
-    if (idExercise < 2) {
+    if (idExercise < 7) {
       setTabIndex((prev) => prev + 1);
     } else {
       setShowFeedback(true);
@@ -183,20 +183,18 @@ export const SortStepsTest = ({
               </Flex>
               <Flex justifyContent="center">
                 {linkNext ? (
-                  <Link href={`/exercise/${(idExercise % 14) + 1}`}>
-                    <Button
-                      onClick={handlerNextExercise}
-                      colorScheme="twitter"
-                      marginRight="12px"
-                      fontSize={{
-                        base: "11px",
-                        sm: "13px",
-                        lg: "16px",
-                      }}
-                    >
-                      {NEXT_EXERCISE_BUTTOM_NAME}
-                    </Button>
-                  </Link>
+                  <Button
+                    onClick={handlerNextExercise}
+                    colorScheme="twitter"
+                    marginRight="12px"
+                    fontSize={{
+                      base: "11px",
+                      sm: "13px",
+                      lg: "16px",
+                    }}
+                  >
+                    {NEXT_EXERCISE_BUTTOM_NAME}
+                  </Button>
                 ) : (
                   <Button
                     onClick={() => setNextPhase(false)}

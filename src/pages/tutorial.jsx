@@ -1,15 +1,11 @@
 import React from "react";
 import dynamic from "next/dynamic";
-
-const DynamicComponentWithNoSSR = dynamic(
-  () => import("../components/tutor/GuideExercise/Tutorial"),
-  { ssr: false }
-);
+import Tutorial from "../components/tutor/GuideExercise/Tutorial";
 
 export default function TutorialPage() {
   return (
     <div>
-      <DynamicComponentWithNoSSR />
+      <Tutorial />
     </div>
   );
 }

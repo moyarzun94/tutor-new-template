@@ -10,10 +10,6 @@ export function Navigation() {
   return (
     <ScrollArea pt="5" pb="6">
       <Stack pb="6">
-        <SidebarLink icon={<FaHome />} href="/">
-          Home
-        </SidebarLink>
-
         {user && (
           <>
             <SidebarLink icon={<FaLock />} href="/tutorial">
@@ -22,9 +18,6 @@ export function Navigation() {
 
             <SidebarLink icon={<FaLock />} href="/practice">
               Practica
-            </SidebarLink>
-            <SidebarLink icon={<FaLock />} href="/exercise/0">
-              Tutor Ecuaciones
             </SidebarLink>
           </>
         )}

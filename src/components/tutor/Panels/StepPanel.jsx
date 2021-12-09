@@ -25,6 +25,7 @@ export const StepPanel = ({
   setStepCorrect,
   setColor,
   setNextExercise,
+  content,
 }) => {
   const [items, setItems] = useState(null);
   const [answer, setAnswer] = useState(true);
@@ -35,7 +36,6 @@ export const StepPanel = ({
   const [firstTimeHint, setFirstTimeHint] = useState(true);
   const [idAnswer, setIdAnswer] = useState(-1);
   const exerciseContext = useContext(ExerciseContext);
-  const { content } = exerciseContext;
 
   const startAction = useAction({});
   useEffect(() => {
@@ -73,6 +73,7 @@ export const StepPanel = ({
           column={item.column}
           value={item.value}
           items={items}
+          content={content}
           setItems={setItems}
           answer={answer}
           isCorrect={isCorrect}
@@ -220,6 +221,7 @@ export const StepPanel = ({
                   answerId={idAnswer}
                   newHintAvaliable={newHintAvaliable}
                   nStep={nStep}
+                  content={content}
                 />
               </Grid>
 
@@ -238,6 +240,7 @@ export const StepPanel = ({
                       setNewHintAvaliable={setNewHintAvaliable}
                       answerId={idAnswer}
                       newHintAvaliable={newHintAvaliable}
+                      content={content}
                     />
                   </div>
                 </Flex>

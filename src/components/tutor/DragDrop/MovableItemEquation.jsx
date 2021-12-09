@@ -19,6 +19,7 @@ export const MovableItemEquation = ({
   column,
   answer,
   items,
+  content,
   answerTwo,
   isCorrect,
 }) => {

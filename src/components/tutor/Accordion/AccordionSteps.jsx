@@ -62,13 +62,17 @@ export const AccordionSteps = ({ exercise, setNextExercise }) => {
   const onClickAccordionStep = (index) => {
     if (index.length > isOpenIndexes.length) {
       let stepID = index.at(-1);
-      startAction({ verbName: "openStep", stepID: stepID, contentID: content });
+      startAction({
+        verbName: "openStep",
+        stepID: stepID,
+        contentID: exercise.content,
+      });
     } else {
       let stepID = isOpenIndexes.filter((id) => !index.includes(id));
       startAction({
         verbName: "closeStep",
         stepID: stepID.at(0),
-        contentID: content,
+        contentID: exercise.content,
       });
     }
     setIsOpenIndexes(index);
@@ -134,6 +138,7 @@ export const AccordionSteps = ({ exercise, setNextExercise }) => {
                     totalSteps={totalSteps}
                     setStepCorrect={setStepCorrect}
                     setColor={setColor}
+                    content={exercise.content}
                     setNextExercise={setNextExercise}
                   />
                 ) : step.type === INPUT ? (
@@ -146,6 +151,7 @@ export const AccordionSteps = ({ exercise, setNextExercise }) => {
                     totalSteps={totalSteps}
                     setStepCorrect={setStepCorrect}
                     setColor={setColor}
+                    content={exercise.content}
                     setNextExercise={setNextExercise}
                   />
                 ) : (
@@ -158,6 +164,7 @@ export const AccordionSteps = ({ exercise, setNextExercise }) => {
                     totalSteps={totalSteps}
                     setStepCorrect={setStepCorrect}
                     setColor={setColor}
+                    content={exercise.content}
                     setNextExercise={setNextExercise}
                   />
                 )}

@@ -34,6 +34,7 @@ export const Hint = ({
   newHintAvaliable,
   answerId,
   nStep,
+  content,
 }) => {
   const initialFocusRef = useRef();
 
@@ -47,7 +48,6 @@ export const Hint = ({
   const [countNotification, setCountNotication] = useState(0);
   const startAction = useAction({});
   const exerciseContext = useContext(ExerciseContext);
-  const { content } = exerciseContext;
   useEffect(() => {
     setCount(hintsAvaliableList.length - 1);
     setLastHint(getHint(answerId));

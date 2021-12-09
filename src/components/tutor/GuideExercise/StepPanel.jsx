@@ -125,7 +125,7 @@ export const StepPanel = ({
 
             const das = {
               target: ".panel2",
-              content: "Existen pasos en donde debera escribir su respuesta.",
+              content: "Existen pasos en donde debes escribir tu respuesta.",
               spotlightClicks: true,
               hideCloseButton: true,
               disableOverlayClose: true,
@@ -136,7 +136,7 @@ export const StepPanel = ({
             const lastStep = {
               target: ".panel2",
               content:
-                "Llego su turno, ahora resuelva completamente el ejercicio",
+                "Llego tu turno, ahora resuelva completamente el ejercicio",
               spotlightClicks: true,
               hideCloseButton: true,
               disableOverlayClose: true,
@@ -160,7 +160,7 @@ export const StepPanel = ({
             const newStep = {
               target: ".hintclick",
               content:
-                "Cuando se corrija una respuesta incorrecta, una pista se activara si hay disponibles. Presione el botón Pista",
+                "Cuando una respuesta es incorrecta, se activaran pistas si hay disponibles. Estas son opcionales, si deseas ver una de ellas presiona el botón Pista",
               spotlightClicks: true,
               hideCloseButton: true,
               disableOverlayClose: true,
@@ -177,7 +177,6 @@ export const StepPanel = ({
       }
       if (step.n_step === nStep && nStep !== 0) {
         if (answer[0].id === step.correct_answer) {
-          console.log("entre donde no debia");
           setStepCorrect((state) => [...state, answer[0].value]);
           setColor((prev) => [
             ...prev.slice(0, nStep),

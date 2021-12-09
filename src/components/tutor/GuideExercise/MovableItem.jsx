@@ -68,7 +68,6 @@ export const MovableItem = ({
       if (existsAnswer) {
         if (dropResult && dropResult.name.title === COLUMN1) {
           changeItemColumn(item.value, COLUMN1);
-          console.log("sali");
           if (!answer) {
             startAction({
               verbName: "unchooseAnswer",

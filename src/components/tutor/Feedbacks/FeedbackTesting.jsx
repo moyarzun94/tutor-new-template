@@ -27,41 +27,16 @@ export const FeedbackTesting = ({ showFeedback }) => {
       <Modal isOpen={showF} onClose={onClose} size={"3xl"}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Retroalimentación General</ModalHeader>
+          <ModalHeader style={{ margin: "auto" }}>
+            Felicidades has completado todos los ejercicios
+          </ModalHeader>
           <ModalCloseButton onClick={() => setShowF(false)} />
-          <ModalBody style={{ fontSize: "20px" }}>
-            <Text>Para resolver una ecuación cuadrática, cuya forma es</Text>
-            <TeX
-              math={"ax²+-bx+c=0 , a,b,c \\in \\R \\wedge a \\neq 0"}
-              as="figcaption"
-              style={{ textAlign: "center" }}
-            />
-            <Text>Se utiliza la formúla general</Text>
-            <TeX
-              math={"x = \\frac {-b \\pm \\sqrt {b^2 - 4ac}}{2a}"}
-              as="figcaption"
-              style={{ textAlign: "center" }}
-            />
-            <Text>Así el conjunto de solucion se define como:</Text>
-            <TeX
-              math={
-                "S = \\{ x = \\frac {-b - \\sqrt {b^2 - 4ac}}{2a}, x = \\frac {-b + \\sqrt {b^2 - 4ac}}{2a} \\}  , si \\hspace{0.2cm}  b²-4ac > 0  "
-              }
-              as="figcaption"
-              style={{ alignItems: "center" }}
-            />
-            <TeX
-              math={
-                "S = \\{ x = \\frac {-b }{2a} \\}  , si \\hspace{0.2cm}  b²-4ac = 0  "
-              }
-              as="figcaption"
-              style={{ alignItems: "center" }}
-            />
-            <TeX
-              math={"S = \\emptyset  , si \\hspace{0.2cm}  b²-4ac < 0  "}
-              as="figcaption"
-              style={{ alignItems: "center" }}
-            />
+          <ModalBody style={{ fontSize: "20px", margin: "auto" }}>
+            <Text>
+              {" "}
+              Gracias por participar de esta prueba general de usabilidad.
+            </Text>
+            <Text>Tu feedback nos sera de gran ayuda.</Text>
           </ModalBody>
           <ModalFooter>
             <Button colorScheme="red" mr={3} onClick={() => setShowF(false)}>

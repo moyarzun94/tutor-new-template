@@ -48,7 +48,7 @@ export function SyncAuth() {
             tags
           }
         }
-        project(code: "project1") {
+        project(code: "equation_tutor") {
           id
           code
           label

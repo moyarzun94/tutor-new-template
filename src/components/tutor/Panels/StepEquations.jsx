@@ -26,6 +26,7 @@ export const StepEquations = ({
   setStepCorrect,
   setColor,
   setNextExercise,
+  content,
 }) => {
   const [items, setItems] = useState(null);
   const [answer, setAnswer] = useState(true);
@@ -39,7 +40,6 @@ export const StepEquations = ({
   const [firstTimeHint, setFirstTimeHint] = useState(true);
   const [idAnswer, setIdAnswer] = useState({});
   const exerciseContext = useContext(ExerciseContext);
-  const { content } = exerciseContext;
   const startAction = useAction({});
 
   useEffect(() => {
@@ -80,6 +80,7 @@ export const StepEquations = ({
           key={item.id}
           value={item.value}
           setItems={setItems}
+          content={content}
           column={item.column}
           items={items}
           answer={answer}
@@ -256,6 +257,7 @@ export const StepEquations = ({
                   setNewHintAvaliable={setNewHintAvaliable}
                   answerId={idAnswer}
                   newHintAvaliable={newHintAvaliable}
+                  content={content}
                 />
               </Grid>
 
@@ -274,6 +276,7 @@ export const StepEquations = ({
                       setNewHintAvaliable={setNewHintAvaliable}
                       answerId={idAnswer}
                       newHintAvaliable={newHintAvaliable}
+                      content={content}
                     />
                   </div>
                 </Flex>

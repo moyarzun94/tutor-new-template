@@ -28,6 +28,7 @@ export const StepInput = ({
   setStepCorrect,
   setColor,
   setNextExercise,
+  content,
 }) => {
   const [isCorrect, setIsCorrect] = useState(0);
   const [answer, setAnswer] = useState("");
@@ -37,7 +38,6 @@ export const StepInput = ({
   const [newHintAvaliable, setNewHintAvaliable] = useState(false);
   const [firstTimeHint, setFirstTimeHint] = useState(true);
   const [answerInput, setAnswerInput] = useState("");
-  const { content } = exerciseContext;
 
   const startAction = useAction({});
   const onChange = (e) => {
@@ -175,6 +175,7 @@ export const StepInput = ({
                   setNewHintAvaliable={setNewHintAvaliable}
                   answerId={parseInt(answerInput)}
                   newHintAvaliable={newHintAvaliable}
+                  content={content}
                 />
               </Grid>
 
@@ -192,6 +193,7 @@ export const StepInput = ({
                       setNewHintAvaliable={setNewHintAvaliable}
                       answerId={parseInt(answerInput)}
                       newHintAvaliable={newHintAvaliable}
+                      content={content}
                     />
                   </div>
                 </Flex>
