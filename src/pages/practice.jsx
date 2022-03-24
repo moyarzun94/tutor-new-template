@@ -52,7 +52,6 @@ export default withAuth(function PracticePage() {
             Ejercicio 1
           </Tab>
           <Tab
-            isDisabled={colorTab[0] === "white" ? true : false}
             style={{
               background:
                 tabIndex === 1
@@ -66,7 +65,6 @@ export default withAuth(function PracticePage() {
             Ejercicio 2
           </Tab>
           <Tab
-            isDisabled={colorTab[1] === "white" ? true : false}
             style={{
               background:
                 tabIndex === 2
@@ -81,7 +79,6 @@ export default withAuth(function PracticePage() {
           </Tab>
 
           <Tab
-            isDisabled={colorTab[2] === "white" ? true : false}
             style={{
               background:
                 tabIndex === 3
@@ -96,7 +93,6 @@ export default withAuth(function PracticePage() {
           </Tab>
 
           <Tab
-            isDisabled={colorTab[3] === "white" ? true : false}
             style={{
               background:
                 tabIndex === 4
@@ -111,7 +107,6 @@ export default withAuth(function PracticePage() {
           </Tab>
 
           <Tab
-            isDisabled={colorTab[4] === "white" ? true : false}
             style={{
               background:
                 tabIndex === 5
@@ -126,7 +121,6 @@ export default withAuth(function PracticePage() {
           </Tab>
 
           <Tab
-            isDisabled={colorTab[5] === "white" ? true : false}
             style={{
               background:
                 tabIndex === 6
@@ -141,7 +135,6 @@ export default withAuth(function PracticePage() {
           </Tab>
 
           <Tab
-            isDisabled={colorTab[6] === "white" ? true : false}
             style={{
               background:
                 tabIndex === 7
